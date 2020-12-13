@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reciclapp - Sobre Nós </title>
+  <!--Logo do site-->
+  <link rel="icon" type="imagen/png" href="Img/LogoCabecalho-site.png" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <!--Fonte e icons Awesome -->
+
+  <script src="https://kit.fontawesome.com/f9a6eaaa0b.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Content here -->
+
+  <!--Chat usando o Jivo-->
+  <script src="//code.jivosite.com/widget/aHQbc8mkaY" async></script>
+
+
+</head>
+
+<body>
+
+  <input type="checkbox" id="chec">
+  <label for='chec'>
+    <img src='Img/dropdown Icon.png' class='menuIcon'>
+  </label>
+  <nav id="menu" class="navbar navbar-expand-md navbar-dark  mb-4">
+    <li style="list-style: none;"><a href="index.html"> <i class="fas fa-home"></i> Home </a></li>
+    <li style="list-style: none;"><a href="parceiros.html"> <i class="fas fa-handshake"> </i> Parceiros</a></li>
+    <li style="list-style: none;"><a href="sobrenos.html"> <i class="fas fa-address-card"> </i> Sobre Nós </a></li>
+    <li style="list-style: none;"><a href="duvidas.html"> <i class="fas fa-question-circle"> </i> Dúvidas </a></li>
+    <li style="list-style: none;"><a href="contato.html"> <i class="fas fa-id-card-alt"> </i> Contato </a></li>
+  </nav>
+
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Contato
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Contato</li>
+    </ol>
+
+    <!-- Content Row -->
+    <div class="row">
+      <!-- Map Column -->
+      <div class="col-lg-8 mb-4">
+        <!-- Adicionando o  Google Map -->
+        
+          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252837.34561318054!2d-35.07872594126676!3d-8.0418006433539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab196f88c446e5%3A0x3c9ef52922447fd4!2sRecife%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1607891572021!5m2!1spt-BR!2sbr"></iframe>  
+      
+      
+        </div>
+      <!-- Contact Details Column -->
+      <div class="col-lg-4 mb-4">
+        <h3>Contato</h3>
+        <p>
+          Santo Antônio, Recife
+          <br>Perbanmbuco, Cep 50010-010
+          <br>
+        </p>
+        <p>
+          <a title="Phone">Telefone</a>: (+55) 81--------
+        </p>
+        <p>
+          <a title="Email">E-mail</a>:
+          <a href="mailto:TeamReciclapp@gmail.com">TeamReciclapp@gmail.com
+          </a>
+        </p>
+        <p>
+
+        <!-- Inserindo horário e data por meio de JavaScript-->
+
+          <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+          <script type="text/javascript">
+            jQuery(window).load(function($){
+              atualizaRelogio();
+            });
+          </script>
+        </HEAD>
+        <BODY>
+          <div>
+            <a title="Date">  Data: </a><output id="data" style="font-family: 'Roboto',; font-size: 14px;"></output>
+          </div>
+          <div>
+            <a title="Hour"> Hora: </a> <output id="hora" style="font-family: 'Roboto',; font-size: 14px;"></output>				
+          </div>			
+        </BODY>
+        <script>
+          function atualizaRelogio(){ 
+            var momentoAtual = new Date();
+            
+            var vhora = momentoAtual.getHours();
+            var vminuto = momentoAtual.getMinutes();
+            var vsegundo = momentoAtual.getSeconds();
+            
+            var vdia = momentoAtual.getDate();
+            var vmes = momentoAtual.getMonth() + 1;
+            var vano = momentoAtual.getFullYear();
+            
+            if (vdia < 10){ vdia = "0" + vdia;}
+            if (vmes < 10){ vmes = "0" + vmes;}
+            if (vhora < 10){ vhora = "0" + vhora;}
+            if (vminuto < 10){ vminuto = "0" + vminuto;}
+            if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+      
+            dataFormat = vdia + " / " + vmes + " / " + vano;
+            horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+      
+            document.getElementById("data").innerHTML = dataFormat;
+            document.getElementById("hora").innerHTML = horaFormat;
+      
+            setTimeout("atualizaRelogio()",1000);
+          }
+        </script>
+      
+        </p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h3>Fale Conosco</h3>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Nome:</label>
+              <input type="text" class="form-control" id="name" required
+                data-validation-required-message="Please enter your name.">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Telefone:</label>
+              <input type="tel" class="form-control" id="phone" required
+                data-validation-required-message="Please enter your phone number.">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>E-mail:</label>
+              <input type="email" class="form-control" id="email" required
+                data-validation-required-message="Please enter your email address.">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Mensagem:</label>
+              <textarea rows="10" cols="100" class="form-control" id="message" required
+                data-validation-required-message="Please enter your message" maxlength="999"
+                style="resize:none"></textarea>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+
+<!--Horario em HTML-->
+
+  
+
+
+
+
+</body>
+
+<footer class="margem" style="text-align: center; font-size: larger;margin-bottom: 2%;"> Descarte o Seu Eletrônico de
+  Forma correta </br> Copyright &copy; 2020 - Team ReciclApp <br /> </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>

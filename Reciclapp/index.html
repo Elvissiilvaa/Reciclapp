@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclapp - Home</title>
+    <!--Logo do site-->
+    <link rel="icon" type="imagen/png" href="Img/LogoCabecalho-site.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <!--Fonte e icons Awesome -->
+    <script src="https://kit.fontawesome.com/f9a6eaaa0b.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+<!--Chat usando o Jivo-->
+    <script src="//code.jivosite.com/widget/aHQbc8mkaY" async></script>
+
+</head>
+<!-- Menu -->
+<body>
+    <input type="checkbox" id="chec">
+    <label for='chec'>
+        <img src='Img/dropdown Icon.png' class='menuIcon'>
+    </label>
+    <nav id="menu" class="navbar navbar-expand-md navbar-dark  mb-4">
+        <li style="list-style: none;"><a href="index.html"> <i class="fas fa-home"></i> Home </a></li>
+        <li style="list-style: none;"><a href="parceiros.html"> <i class="fas fa-handshake"> </i> Parceiros</a></li>
+        <li style="list-style: none;"><a href="sobrenos.html"> <i class="fas fa-address-card"> </i> Sobre Nós </a></li>
+        <li style="list-style: none;"><a href="duvidas.html"> <i class="fas fa-question-circle"> </i> Dúvidas </a></li>
+        <li style="list-style: none;"><a href="contato.html"> <i class="fas fa-id-card-alt"> </i> Contato </a></li>
+    </nav>
+
+    <div class='corpo'>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm" style="text-align: center;">
+                    <img class="logo" src="Img/Logo 1.png" alt="Reciclapp" alt="Responsive image">
+
+                    <h2 style="text-align: center; font-size: larger;margin-bottom: 2%;">Descarte de forma consicente e
+                        ajude pessoas</h2>
+                    <p class="lead text-muted"> </p>
+                    <p class="lead text-muted"> O Brasil produz cerca de 1,5 mil toneladas de lixo eletrônico </p>
+                    <p class="lead text-muted"> apenas 3% de todo esse montante tem um descarte adequado!</p>
+
+                    <p class="lead text-muted"> <b>Entre em contato conosco e nós iremos lhe ajudar com o seu lixo
+                            eletrônico!</b></p>
+
+                    <button id="helpBtn" type="button" class="btn btn-success" onclick="showForm()">Para Você</button>
+
+                    <button id="helpBtnpj" type="button" class="btn btn-success" onclick="showFormCnpj()">Para Sua
+                        Empresa</button>
+
+                    <br /><br />
+
+                    <section id="formTest" class="form">
+
+                        <!--Formulário que vai executar ação.-->
+                        <h2>Entre na lista de colaboradores</h2>
+                        <form action="/">
+                            <!--entrada de informação-->
+                            <input type="text" company name="nome empresa" placeholder="Nome Completo">
+                            <input type="text" name="Individual Registration" placeholder="CPF">
+                            <input type="text" name="E-mail" placeholder="E-mail">
+                            <input type="text" name="Phone" placeholder="Fone">
+                            <input type="text" name="Endereço" placeholder="Endereço">
+                            <!--Será criado um select para escolher o tipo de eletrônico.. -->
+                            <input type="text" name="Tipo de Lixo" placeholder="Digite o Tipo de Lixo">
+                            <button type="button" onclick="hideForm()" class=" btn-enviar">Enviar</button>
+                        </form>
+                    </section>
+
+
+                    <section id="formTestCnpj" class="form">
+                        <!--Formulário que vai executar ação.-->
+                        <h2>Entre na lista de colaboradores</h2>
+                        <form action="/">
+                            <!--entrada de informação-->
+                            <input type="text" company name="nome empresa" placeholder="Nome Empresa">
+                            <input type="text" name="Individual Registration" placeholder="CNPJ">
+                            <input type="text" name="E-mail" placeholder="E-mail">
+                            <input type="text" name="Phone" placeholder="Fone">
+                            <input type="text" name="Endereço" placeholder="Endereço">
+                            <!--Será criado um select para escolher o tipo de eletrônico.. -->
+                            <input type="text" name="Tipo de Lixo" placeholder="Digite o Tipo de Lixo">
+                            <button type="button" onclick="hideFormCnpj()" class=" btn-enviar">Enviar</button>
+                        </form>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="text-align: center;">
+                <h2 class="margem"> Últimos<span> Colaboradores</span></h2>
+                <section class="colaboradores">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="company"> NeoSpace </div>
+                                <!--Agrupamento de conteúdo-->
+                                <p>São joão do Buriti / PE</p>
+                            </div>
+                            <div class="col-sm">
+                                <div class="company"> Sarué </div>
+                                <!--Agrupamento de conteúdo-->
+                                <p>Taperoá/ PB</p>
+                            </div>
+                            <div class="col-sm">
+                                <div class="company"> GeoCom </div>
+                                <!--Agrupamento de conteúdo-->
+                                <p>Imbiribeira/ Pe </p>
+                            </div>
+                            <div class="col-sm">
+                                <div class="company"> Ferpaso </div>
+                                <!--Agrupamento de conteúdo-->
+                                <p>Petrolina/ PE</p>
+                            </div>
+                        </div>
+                    </div>
+                    </main>
+            </div>
+        </div>
+    </div>
+
+    <footer class="margem" style="text-align: center; font-size: larger;margin-bottom: 2%;"> Descarte o Seu Eletrônico
+        de
+        Forma correta </br> Copyright &copy; 2020 - Team ReciclApp <br /></footer>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>

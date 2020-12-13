@@ -1,0 +1,485 @@
+@media screen and (min-width:395px){
+
+    /*ATÉ O FINAL DO BODY O COMPORTAMENTO SERÁ GLOBAL 'TODOS'*/
+
+    *{
+        /*FORÇA A DIMENSÃO DA LARGURA PARA FICAR EM 100% ONDE CORRIGE O COMPORTAMENTO PADRÃO*/
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    html,body{
+        margin: 0;
+        text-align: center;
+        /* Margin no topo com valor ZERADO*/
+
+    }
+    .margem{
+        margin-top: 30px;
+    }
+
+    .align{
+        text-align: center;
+    }
+        body{
+            /* display flex só permite que seja trabalho ou linha ou coluna o que é diferente do GRID o qual pode trabalhar com os dois de forma simultânea*/
+            display: flex;
+            /* aponta o tipo do FlEX que será utilizado. tipo está em COLUMN */
+            flex-direction: column;
+            /* VH = " V de View port "  e  " H de height " */
+            height: 100vh ;
+        
+            /*FONTE*/
+            font-family: 'Roboto', sans-serif;
+            /*background-color: #f9f9f9;  */  
+            text-align: center;
+        }
+
+        .logo{   
+            width: 70%;
+        }
+
+        h1, h2{
+            
+            color: #000000cc;
+        }
+
+        /*TITULOS */
+    header h1, main h2{
+        margin-bottom: 100px;
+        
+    }
+
+    /*H2 próximo da logo do site. usando margin top =  0px*/
+    h2{
+        margin-top: 300px;
+    }
+
+    /*MODIFICAR A COR DA LETRA NO CAMPO MAIN DO <SPAN>*/
+    main h2 span{
+    color: darkgreen;
+    }
+    section.form h2 {
+        text-align: right;
+        margin-right: 50px;
+        color: #ffffff;
+        font-size: 17px;
+    }
+
+    header, main, footer {
+        text-align: center;
+    }
+
+    section.form, main{
+        /*Espaçamento com Margin*/
+        margin-bottom: 70px;
+        /*Limite de elementos na página*/
+        width: 90%;
+        max-width: 500px ;
+        /*Margin auto nos dois lados para ser ajustável a página e ficar centralizado. */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    ::-webkit-input-placeholder {
+        color: white;
+     }
+     
+     :-moz-placeholder { /* Firefox 18- */
+        color:white;  
+     }
+     
+     ::-moz-placeholder {  /* Firefox 19+ */
+        color:white;  
+     }
+     
+     :-ms-input-placeholder {  
+        color:white;  
+     }
+
+
+
+    /*HEADER*/
+    .button{
+        margin-top: 16px;
+        padding: 8px 16px ;
+        border-radius: 4px ;
+        -webkit-border-radius: 4px ;
+        -moz-border-radius: 4px ;
+        -ms-border-radius: 4px ;
+        -o-border-radius: 4px ;
+        border: none;
+        background-color:darkgreen;
+        color: white;
+        font-weight: bold /*FONTE EM NEGRITO*/;
+    }
+    img{
+        margin: 2mm;
+    }
+
+    /* Formatação do Menu */
+
+    nav#menu {
+        /*display: block;*/
+        background-color: rgb(74, 230, 108);
+        justify-content: center !important;
+    }
+
+  
+
+    /*Transição onde o menu ficará com um tom mais escuro ao ser selecionado.*/
+    /*Esse INLINE faz com que o menu fique lado a lado*/
+
+
+    /*Cor do Menu*/
+    nav#menu :hover{
+        background-color:lightgreen
+    }
+
+    nav#menu a{
+        color:green;
+        text-decoration: none;
+        display: inline-block;
+        padding:26px;
+        margin-bottom: 0mm;
+        font-family: 'Exo 2', sans-serif;
+        
+    }
+   
+    header, section.form, main {
+        margin-bottom: 70px;
+        width: 90%;
+        max-width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /*FORM*/
+
+    /*Display = forma que mostra o elemento na tela.*/
+
+    /*Grid aparece em colunas e linhas, pois ele pode funcionar das duas formas. */
+    section.form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color:  rgb(18, 197, 27);
+        padding: 11px 62px;
+        border-radius: 5px ;
+        -webkit-border-radius: 5px ;
+        -moz-border-radius: 5px ;
+        -ms-border-radius: 5px ;
+        -o-border-radius: 5px ;
+    }
+    form input,form button {
+        
+        /*LARGURA*/
+        width: 100%;
+        /*ESPAÇAMENTO*/
+        margin-bottom: 4px;
+        
+        /*PREENCHIMENTO DO ELEMENTO*/
+        padding: 8px 16PX;
+
+        /*ARREDONDAMENTO E COR DAS BORDAS*/
+        border-radius: 4px ;
+        -webkit-border-radius: 4px ;
+        -moz-border-radius: 4px ;
+        -ms-border-radius: 4px ;
+        -o-border-radius: 4px ;
+        border: 1px white solid;
+    }
+    form,input{
+        background-color: transparent;
+    }
+    form,input ::placeholder {
+        color: #ffffffaa;
+    }
+
+    form button {
+        font-weight: bold;
+    }
+
+    /*ATRASO DE 300 MILESEGUNDOS*/
+    section.form {
+        transition: all 300ms;
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        -ms-transition: all 300ms;
+        -o-transition: all 300ms;
+    }
+    /*FUNCIONALIDADES DO JS*/
+    section.form.hide{
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        margin-top: -80px
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    a:hover{
+        background-color: rgb(69, 214, 101);
+        transition: ease all 0.3s;
+    }
+
+    .corpo{
+        display: flex;
+        width: 60%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 25px;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+
+    .menuIcon{
+        display: none;
+    }
+
+    input[type="checkbox"]{
+        display: none;
+    }    
+
+    label{
+        display:none;
+        position:absolute;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:395px){
+    
+    /*ATÉ O FINAL DO BODY O COMPORTAMENTO SERÁ GLOBAL 'TODOS'*/
+
+    *{
+        /*FORÇA A DIMENSÃO DA LARGURA PARA FICAR EM 100% ONDE CORRIGE O COMPORTAMENTO PADRÃO*/
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    html,body{
+        margin: 0;
+        text-align: center;
+        /* Margin no topo com valor ZERADO*/
+
+    }
+    .margem{
+        margin-top: 30px;
+    }
+
+    .align{
+        text-align: center;
+    }
+        body{
+            /* display flex só permite que seja trabalho ou linha ou coluna o que é diferente do GRID o qual pode trabalhar com os dois de forma simultânea*/
+            display: flex;
+            /* aponta o tipo do FlEX que será utilizado. tipo está em COLUMN */
+            flex-direction: column;
+            /* VH = " V de View port "  e  " H de height " */
+            height: 100vh ;
+        
+            /*FONTE*/
+            font-family: 'Roboto', sans-serif;
+            /*background-color: #f9f9f9;  */  
+            text-align: center;
+        }
+
+        .logo{   
+            width: 100%;
+            padding-bottom: 20%;
+        }
+
+        h1, h2{
+            
+            color: #000000cc;
+        }
+
+        /*TITULOS */
+    header h1, main h2{
+        margin-bottom: 100px;
+        
+    }
+
+    /*H2 próximo da logo do site. usando margin top =  0px*/
+    h2{
+        margin-top: 300px;
+    }
+
+    /*MODIFICAR A COR DA LETRA NO CAMPO MAIN DO <SPAN>*/
+    main h2 span{
+    color: darkgreen;
+    }
+    section.form h2 {
+        text-align: right;
+        margin-right: 50px;
+        color: #ffffff;
+        font-size: 17px;
+    }
+
+    header, main, footer {
+        text-align: center;
+    }
+
+    section.form, main{
+        /*Espaçamento com Margin*/
+        margin-bottom: 70px;
+        /*Limite de elementos na página*/
+        width: 90%;
+        max-width: 500px ;
+        /*Margin auto nos dois lados para ser ajustável a página e ficar centralizado. */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*HEADER*/
+    .button{
+        margin-top: 16px;
+        padding: 8px 16px ;
+        border-radius: 4px ;
+        -webkit-border-radius: 4px ;
+        -moz-border-radius: 4px ;
+        -ms-border-radius: 4px ;
+        -o-border-radius: 4px ;
+        border: none;
+        background-color:darkgreen;
+        color: white;
+        font-weight: bold /*FONTE EM NEGRITO*/;
+    }
+    img{
+        margin: 2mm;
+    }
+
+    /* Formatação do Menu */
+
+    nav#menu {
+        /*display: block;*/
+        background-color: rgb(74, 230, 108);
+        justify-content: center !important;
+    }
+
+    /*Posicionamento do menu sobre o TOPO*/
+    nav#menu ul {
+        list-style: none;
+        text-transform: uppercase;
+        position: absolute;
+        top: -10.4px;
+        left: 100px;
+        right: 160px;
+        padding-left: 1px;
+        
+    }
+   
+    
+    /*FORM*/
+
+    form,input{
+        background-color: transparent;
+    }
+    form,input ::placeholder {
+        color: #ffffffaa;
+    }
+
+    form button {
+        font-weight: bold;
+    }
+
+
+    /*ATRASO DE 300 MILESEGUNDOS*/
+    section.form {
+        transition: all 300ms;
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        -ms-transition: all 300ms;
+        -o-transition: all 300ms;
+    }
+    /*FUNCIONALIDADES DO JS*/
+    section.form.hide{
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        margin-top: -80px
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .corpo{
+        display: flex;
+        width:90%;
+        align-self: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 25px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        position:absolute;
+        margin-top: 50px;
+    }    
+
+    .margem{
+        padding-top: 120px;
+        position:relative;
+    }
+
+    .menuIcon{
+        width:40px;
+        height:30px;
+        margin-left: 0px;
+        z-index: 1;
+        position:absolute;
+        margin-top: 32px;
+        margin-left: 32px;
+        z-index:2;
+    }
+
+    input[type="checkbox"]{
+        display: none;
+        z-index:2;
+    }
+
+    nav{
+        width:350px;
+        border-bottom-right-radius: 50px;
+        transition: ease all 0.3s;
+        position:absolute;
+        height:90%;
+        left:-350px;
+        background:white;
+        transition: ease all 0.3s;
+        z-index: 1;
+        margin-top:0px;
+    }
+
+    nav a{
+        display:block;
+        width:100%;
+        margin-top:60px;
+        align-items: center;
+        font-size:20px;
+        justify-content: center;
+        text-decoration-color:white;
+    }
+
+    input[type='checkbox']:checked ~ nav{
+        transform: translateX(350px);
+        transition: ease all 0.3s;
+        background:rgb(74, 230, 108);
+    }
+
+    label{
+        position:absolute;
+    }
+
+}
